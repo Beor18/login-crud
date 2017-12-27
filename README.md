@@ -1,15 +1,15 @@
-# LoginEjemplo
+# LoginEjemplo 
 
-To start your Phoenix app:
+![Demo](https://i.imgur.com/smDL8Xp.png)
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
-  * Start Phoenix endpoint with `mix phoenix.server`
+Para iniciar la app:
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+  * Instalar dependencias con `mix deps.get`
+  * Crear y migrar la base de datos con `mix ecto.create && mix ecto.migrate`
+  * Instalar dependencias NodeJS `npm install`
+  * Iniciar servidor con `mix phoenix.server`
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+Visitar [`localhost:4000`](http://localhost:4000) desde el navegador.
 
 ## Learn more
 
