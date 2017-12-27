@@ -44,7 +44,7 @@ defmodule LoginEjemplo.Router do
   # Add this block
   scope "/" do
     pipe_through :protected
-    #coherence_routes :protected
+    coherence_routes :protected
   end
 
   # Other scopes may use custom stacks.
