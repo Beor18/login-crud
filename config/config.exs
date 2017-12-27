@@ -43,3 +43,6 @@ config :coherence, LoginEjemplo.Coherence.Mailer,
   adapter: Swoosh.Adapters.Sendgrid,
   api_key: "your api key here"
 # %% End Coherence Configuration %%
+
+config :coherence,
+  layout: {LoginEjemplo.LayoutView, :app}
