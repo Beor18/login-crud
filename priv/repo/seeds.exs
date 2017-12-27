@@ -9,3 +9,8 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will halt execution if something goes wrong.
+
+Authexample.Repo.delete_all Authexample.User
+
+Authexample.User.changeset(%Authexample.User{}, %{name: "Fernando", email: "tecnicafly@gmail.com", password: "prueba123", password_confirmation: "prueba123"})  
+|> Authexample.Repo.insert!
