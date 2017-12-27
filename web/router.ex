@@ -23,6 +23,18 @@ defmodule LoginEjemplo.Router do
     plug Coherence.Authentication.Session, protected: true
   end
 
+  # agregamos este bloque
+  scope "/" do
+    pipe_through :browser
+    coherence_routes
+  end
+
+  # agregamos este bloque
+  scope "/" do
+    pipe_through :protected
+    coherence_routes :protected
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -31,6 +43,13 @@ defmodule LoginEjemplo.Router do
     pipe_through :browser # Use the default browser stack
     resources "/posts", PostController
     get "/", PageController, :index
+  end
+
+  #Agregamos Ruta protegida /posts
+  scope "/", Authexample do
+    pipe_through :protected # Use the default browser stack
+
+    resources "/posts",PostController
   end
 
   # Other scopes may use custom stacks.
