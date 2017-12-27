@@ -20,7 +20,7 @@ defmodule LoginEjemplo.Mixfile do
   def application do
     [
       mod: {LoginEjemplo, []},
-      extra_applications: [:logger]
+      extra_applications: [:logger, :coherence]
     ]
   end
 
@@ -38,6 +38,7 @@ defmodule LoginEjemplo.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},
+      {:coherence, "~> 0.3"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"}
