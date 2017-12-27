@@ -1,3 +1,5 @@
-defmodule LoginEjemplo.Coherence.SessionView do
+defmodule Coherence.SessionView do
   use LoginEjemplo.Coherence.Web, :view
+
+
 end

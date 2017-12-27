@@ -1,3 +1,4 @@
-defmodule LoginEjemplo.Coherence.RegistrationView do
+defmodule Coherence.RegistrationView do
   use LoginEjemplo.Coherence.Web, :view
+
 end

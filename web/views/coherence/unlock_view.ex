@@ -1,3 +1,5 @@
-defmodule LoginEjemplo.Coherence.UnlockView do
+defmodule Coherence.UnlockView do
   use LoginEjemplo.Coherence.Web, :view
+
+
 end

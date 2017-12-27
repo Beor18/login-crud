@@ -1,3 +1,5 @@
-defmodule LoginEjemplo.Coherence.LayoutView do
+defmodule Coherence.LayoutView do
   use LoginEjemplo.Coherence.Web, :view
+
+
 end

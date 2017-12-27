@@ -1,3 +1,4 @@
-defmodule LoginEjemplo.Coherence.InvitationView do
+defmodule Coherence.InvitationView do
   use LoginEjemplo.Coherence.Web, :view
+
 end
