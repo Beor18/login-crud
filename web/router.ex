@@ -48,7 +48,7 @@ defmodule LoginEjemplo.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", LoginEjemplo do
-  #   pipe_through :api
-  # end
+  scope "/api", LoginEjemplo do
+    pipe_through :api
+  end
 end
