@@ -1,6 +1,6 @@
-<h2>Edit post</h2>
+<h2>Editar Noticia</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :update, @post) %>
 
-<span><%= link "Back", to: post_path(@conn, :index) %></span>
+<span><%= link "Volver", to: post_path(@conn, :index) %></span>
