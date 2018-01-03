@@ -1,6 +1,8 @@
-<h2>New post</h2>
+<h2>Nueva Noticia</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: post_path(@conn, :create) %>
 
-<span><%= link "Back", to: post_path(@conn, :index) %></span>
+<div class="" style="margin-bottom:53px !important;">
+    <span><%= link "Volver", to: post_path(@conn, :index) %></span>
+</div>

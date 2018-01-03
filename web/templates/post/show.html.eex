@@ -1,18 +1,14 @@
-<h2>Show post</h2>
-
-<ul>
-
-  <li>
-    <strong>Titulo:</strong>
-    <%= @post.titulo %>
-  </li>
-
-  <li>
-    <strong>Cuerpo:</strong>
+<div class="row">
+  <div class="col-md-12">
+    <h2><%= @post.titulo %></h2>
+  </div>
+  <div class="col-md-12" style="padding-top:20px !important; padding-bottom:20px !important;">
     <%= @post.cuerpo %>
-  </li>
+  
+  </div>
+</div>
 
-</ul>
-
-<span><%= link "Edit", to: post_path(@conn, :edit, @post) %></span>
-<span><%= link "Back", to: post_path(@conn, :index) %></span>
+<div class="row container">
+<span><%= link "Editar", to: post_path(@conn, :edit, @post), class: "btn btn-primary" %></span>
+<span><%= link "Volver", to: post_path(@conn, :index), class: "btn btn-success" %></span>
+</div>
