@@ -38,5 +38,7 @@ defmodule LoginEjemplo.Endpoint do
     key: "_loginEjemplo_key",
     signing_salt: "vlly54qp"
 
+  plug CORSPlug
+    
   plug LoginEjemplo.Router
 end
