@@ -18,6 +18,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :colectivos, class: "control-label" %>
+    <%= textarea f, :colectivos, class: "form-control" %>
+    <%= error_tag f, :colectivos %>
+  </div>
+
+  <div class="form-group">
     <%= submit "Subir", class: "btn btn-primary" %>
   </div>
 <% end %>
