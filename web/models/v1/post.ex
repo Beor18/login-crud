@@ -1,10 +1,9 @@
-defmodule LoginEjemplo.Post do
+defmodule LoginEjemplo.V1.Post do
   use LoginEjemplo.Web, :model
 
   schema "posts" do
     field :titulo, :string
     field :cuerpo, :string
-    field :colectivos, :string
 
     timestamps()
   end
@@ -14,7 +13,7 @@ defmodule LoginEjemplo.Post do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:titulo, :cuerpo, :colectivos])
-    |> validate_required([:titulo, :cuerpo, :colectivos])
+    |> cast(params, [:titulo, :cuerpo])
+    |> validate_required([:titulo, :cuerpo])
   end
 end

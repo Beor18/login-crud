@@ -7,29 +7,58 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello LoginEjemplo!</title>
+    <title>Backend en Phoenix</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <header class="header">
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+            <li><a href="/registrations/new">Comenzemos</a></li>
           </ul>
         </nav>
         <span class="logo"></span>
       </header>
 
+    </div> <!-- /container -->
+
+    <div class="container">
+
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-      <main role="main">
+      <div class="row container">
         <%= render @view_module, @view_template, assigns %>
-      </main>
+      </div>
 
-    </div> <!-- /container -->
+    </div>
+
+    <footer class="nb-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="about">
+                
+                <p>Texto Prueba</p>
+
+              
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="text-center">Copyright © 2018. Fernando Lopez.</p>
+              </div>
+              
+            </div>
+        </section>
+    </footer>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

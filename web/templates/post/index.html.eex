@@ -1,28 +1,40 @@
-<h2>Listing posts</h2>
+ <nav class=" nav navbar-right">
+    <ul class="nav nav-pills">
+      <li>
+        <span><%= link "Nueva Noticia", to: post_path(@conn, :new), class: "btn btn-success" %></span>
+      </li>
+      <li class=""style="margin-top:-20px !important;">
+        <span><%= link "Cerrar Sesion", to: session_path(@conn, :delete), method: "delete", class: "btn btn-warning" %></span>
+      </li>
+      
+    </ul>
+  </nav>
+  
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Cuerpo</th>
+<div class="container" style="padding:30px !important; background:#ECEFF1; margin-bottom:20px !important;">
+  <div class="page-header" style="padding-top:10px !important; margin-bottom:40px !important;">
+    <h2 style="font-size:28px;">Noticias<small> // Alta, Baja y Modificacion</small></h2>
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="text-center">Titulo</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+  <%= for post <- @posts do %>
+      <tr>
+        <td><%= post.titulo %></td>
+       
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for post <- @posts do %>
-    <tr>
-      <td><%= post.titulo %></td>
-      <td><%= post.cuerpo %></td>
-
-      <td class="text-right">
-        <span><%= link "Show", to: post_path(@conn, :show, post), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Edit", to: post_path(@conn, :edit, post), class: "btn btn-default btn-xs" %></span>
-        <span><%= link "Delete", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<span><%= link "New post", to: post_path(@conn, :new) %></span>
+        <td class="text-center" style="padding-left: 8% !important;">
+          <span style="float: left;padding-left: 20px;"><%= link "Mirar", to: post_path(@conn, :show, post), class: "btn btn-primary btn-xs" %></span>
+          <span style="float: left;padding-left: 3px;"><%= link "Editar", to: post_path(@conn, :edit, post), class: "btn btn-warning btn-xs" %></span>
+          <span style="float: left;margin-top: -20px;padding-left: 3px;"><%= link "Borrar", to: post_path(@conn, :delete, post), method: :delete, data: [confirm: "Esta seguro de borrar?"], class: "btn btn-danger btn-xs" %></span>
+        </td>
+      </tr>
+  <% end %>
+    </tbody>
+  </table>
+</div>

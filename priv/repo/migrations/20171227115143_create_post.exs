@@ -5,6 +5,7 @@ defmodule LoginEjemplo.Repo.Migrations.CreatePost do
     create table(:posts) do
       add :titulo, :string
       add :cuerpo, :text
+      add :colectivos, :text 
 
       timestamps()
     end
