@@ -4,6 +4,7 @@ defmodule LoginEjemplo.Post do
   schema "posts" do
     field :titulo, :string
     field :cuerpo, :string
+    field :colectivos, :string
 
     timestamps()
   end
