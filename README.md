@@ -1,6 +1,6 @@
 # LoginEjemplo 
 
-![Demo](https://i.imgur.com/smDL8Xp.png)
+![Demo](https://i.imgur.com/Kmhr4tF.png)
 
 Para iniciar la app:
 
@@ -10,6 +10,14 @@ Para iniciar la app:
   * Iniciar servidor con `mix phoenix.server`
 
 Visitar [`localhost:4000`](http://localhost:4000) desde el navegador.
+
+# Actualizaciones 04/01/2018
+
+* Agregado CORS
+* Agregado API REST [`localhost:4000/v1/posts`](http://localhost:4000/v1/posts)
+* Agregado boton cerrar sesión
+* Nuevo campo en formulario (colectivos, solo para aprender como agregar campo e insertar en la BD)
+* Mejoras en diseño y traducciones a español
 
 ## Learn more
 
