@@ -10,8 +10,6 @@ import 'rxjs/add/operator/map';
 })
 export class HomePage{
   posts = [];
-  filteredMuseum = [];
-  isfiltered: boolean ;
 
   constructor(private http:Http, public navCtrl: NavController, public navParams: NavParams) {
     this.http.get('http://localhost:4000/v1/posts')
@@ -20,7 +18,7 @@ export class HomePage{
             this.posts = data.data;
           },
           err => console.log("error is "+err), // error
-          () => console.log('data de telos completa'+ this.posts) // complete
+          () => console.log('data de lugares completa'+ this.posts) // complete
         );
     
   }
