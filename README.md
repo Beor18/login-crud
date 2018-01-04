@@ -1,6 +1,6 @@
 # LoginEjemplo 
 
-![Demo](https://imgur.com/Kmhr4tF)
+![Demo](https://i.imgur.com/Kmhr4tF.png)
 
 Para iniciar la app:
 
