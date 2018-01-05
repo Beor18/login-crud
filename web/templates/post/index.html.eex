@@ -15,6 +15,13 @@
   <div class="page-header" style="padding-top:10px !important; margin-bottom:40px !important;">
     <h2 style="font-size:28px;">Noticias<small> // Alta, Baja y Modificacion</small></h2>
   </div>
+
+  <%= search_form(@conn, @rummage, [fields:
+  [
+    titulo: %{label: "Buscar Por Nombre", search_type: "ilike"},
+  ], button_class: "btn",
+  ]) %>
+
   <table class="table table-bordered">
     <thead>
       <tr>
