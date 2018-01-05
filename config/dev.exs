@@ -46,6 +46,11 @@ config :logger, :console, format: "[$level] $message\n"
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
 
+config :rummage_ecto, 
+  Rummage.Ecto,
+  default_repo: LoginEjemplo.Repo,
+  default_per_page: 5
+
 # Configure your database
 config :loginEjemplo, LoginEjemplo.Repo,
   adapter: Ecto.Adapters.Postgres,
