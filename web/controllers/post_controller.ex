@@ -1,11 +1,17 @@
 defmodule LoginEjemplo.PostController do
   use LoginEjemplo.Web, :controller
+  use Rummage.Phoenix.Controller
 
   alias LoginEjemplo.Post
 
-  def index(conn, _params) do
-    posts = Repo.all(Post)
-    render(conn, "index.html", posts: posts)
+  def index(conn, params) do
+
+    {query, rummage} = Post
+      |> Rummage.Ecto.rummage(params["rummage"])
+      
+    posts = Repo.all(query)
+      
+    render(conn, "index.html", posts: posts, rummage: rummage)
   end
 
   def new(conn, _params) do
