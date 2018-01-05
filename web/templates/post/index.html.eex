@@ -37,4 +37,5 @@
   <% end %>
     </tbody>
   </table>
+  <%= pagination_link(@conn, @rummage) %>
 </div>
