@@ -21,7 +21,7 @@ defmodule LoginEjemplo.Mixfile do
     [
       mod: {LoginEjemplo, []},
       applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-      :phoenix_ecto, :postgrex, :coherence]
+      :phoenix_ecto, :postgrex, :coherence, :rummage_ecto, :rummage_phoenix]
     ]
   end
 
@@ -39,6 +39,8 @@ defmodule LoginEjemplo.Mixfile do
       {:phoenix_ecto, "~> 3.0"},
       {:cors_plug, "~> 1.2"},
       {:postgrex, ">= 0.0.0"},
+      {:rummage_ecto, "~> 1.2.0"},
+      {:rummage_phoenix, "~> 1.2.0"},
       {:phoenix_html, "~> 2.6"},
       {:coherence, "~> 0.3"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
