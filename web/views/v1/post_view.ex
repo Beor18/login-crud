@@ -12,6 +12,7 @@ defmodule LoginEjemplo.V1.PostView do
   def render("post.json", %{post: post}) do
     %{id: post.id,
       titulo: post.titulo,
-      cuerpo: post.cuerpo}
+      cuerpo: post.cuerpo,
+      image: post.image}
   end
 end

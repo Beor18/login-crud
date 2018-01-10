@@ -7,6 +7,8 @@
     <%= @post.colectivos %>
   
   </div>
+
+  <img src="<%= LoginEjemplo.ImageUploader.url({@post.image, @post}) %>"/>
 </div>
 
 <div class="row container">

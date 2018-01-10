@@ -4,6 +4,7 @@ defmodule LoginEjemplo.V1.Post do
   schema "posts" do
     field :titulo, :string
     field :cuerpo, :string
+    field :image, :string
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule LoginEjemplo.V1.Post do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:titulo, :cuerpo])
-    |> validate_required([:titulo, :cuerpo])
+    |> cast(params, [:titulo, :cuerpo, :image])
+    |> validate_required([:titulo, :cuerpo, :image])
   end
 end
