@@ -11,8 +11,9 @@ Para iniciar la app:
 
 Visitar [`localhost:4000`](http://localhost:4000) desde el navegador.
 
-# Actualizaciones al 05/01/2018
+# Actualizaciones al 09/01/2018
 
+* Agregado subir y mostrar imagenes
 * Agregado Paginación y Buscador
 * Agregado CORS
 * Agregado API REST [`localhost:4000/v1/posts`](http://localhost:4000/v1/posts)
