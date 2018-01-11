@@ -16,6 +16,7 @@
     <ion-item *ngFor="let post of posts">
       <h2><ion-icon ios="ios-pin" md="md-pin"></ion-icon>{{ post.titulo }}</h2>
       <p>{{ post.cuerpo }}</p>
+       <img [src]="post.image">
     </ion-item>
   </ion-list>
 
