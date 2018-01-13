@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import {Http} from '@angular/http';
 
 declare var google: any;
 
@@ -13,22 +14,17 @@ export class AboutPage {
   map: any;
   markers:any;
 
-  lugares = [
-  {
-    nombre: 'lugar1',
-    lugar: 'Nombre-lugar',
-    latitude: -15.5837031,
-    longitude: -56.084949
-  },
-  {
-    nombre: 'lugar2',
-    lugar: 'Nombre-lugar',
-    latitude: -15.574358,
-    longitude: -56.0880802
-}];
+  lugares = [];
 
-  constructor(public navCtrl: NavController, public geolocation: Geolocation, public platform:Platform) {
-
+  constructor(private http:Http, public navCtrl: NavController, public geolocation: Geolocation, public platform:Platform) {
+    this.http.get('http://demo-fernando.herokuapp.com/todos')
+    .map(res => res.json())
+    .subscribe(data => {
+        this.lugares = data.museums;
+      },
+      err => console.log("error is "+err), // error
+      () => console.log('data de lugares completa'+ this.lugares) // complete
+    );
   }
 
   ionViewWillEnter(){
