@@ -8,16 +8,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="fondo-buscador">
+<ion-content class="card-background-page">
 
     <h4>Usted Podra Buscar acorde de manera exacta</h4>
 
-  <ion-list padding-horizontal>
-    <ion-item *ngFor="let post of posts">
-      <h2><ion-icon ios="ios-pin" md="md-pin"></ion-icon>{{ post.titulo }}</h2>
-      <p>{{ post.cuerpo }}</p>
-       <img [src]="post.image">
-    </ion-item>
-  </ion-list>
-
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 *ngFor="let post of posts">
+            <ion-card>
+              <img [src]="post.image"/>
+              <div class="card-title">{{ post.titulo }}</div>
+              <div class="card-subtitle">41 Listings</div>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
 </ion-content>

@@ -16,11 +16,11 @@ export class AboutPage {
 
   lugares = [];
 
-  constructor(private http:Http, public navCtrl: NavController, public geolocation: Geolocation, public platform:Platform) {
-    this.http.get('http://demo-fernando.herokuapp.com/todos')
+  constructor(public http:Http, public navCtrl: NavController, public geolocation: Geolocation, public platform:Platform) {
+    this.http.get('https://demo-fernando.herokuapp.com/todos')
     .map(res => res.json())
     .subscribe(data => {
-        this.lugares = data.museums;
+        this.lugares = data;
       },
       err => console.log("error is "+err), // error
       () => console.log('data de lugares completa'+ this.lugares) // complete
@@ -78,19 +78,19 @@ export class AboutPage {
       this.markers = [];
 
       for (const key of Object.keys(this.lugares)) {
-        console.log(this.lugares[key].nombre )
+        console.log(this.lugares[key].name )
         let latLng = new google.maps.LatLng(this.lugares[key].latitude, this.lugares[key].longitude);
 
         let marker = new google.maps.Marker({
           position: latLng,
-          title: this.lugares[key].nombre
+          title: this.lugares[key].name
         })
 
         let content = `
         <div id="myid"  class="item item-thumbnail-left item-text-wrap">
           <ion-item>
             <ion-row>
-              <h6>`+this.lugares[key].nombre+`</h6>
+              <h6>`+this.lugares[key].name+`</h6>
             </ion-row>
           </ion-item>
         </div>
