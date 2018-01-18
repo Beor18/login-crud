@@ -24,14 +24,19 @@ page-home {
             position: relative;
             text-align: center;
           }
+
+          ion-card img {
+            opacity: 0.94;
+          }
         
           .card-title {
             position: absolute;
             top: 36%;
-            font-size: 2.0em;
+            font-size: 1.2em;
             width: 100%;
             font-weight: bold;
             color: #fff;
+            text-shadow: #000 0px 3px 2px !important;
           }
         
           .card-subtitle {
