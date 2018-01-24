@@ -8,13 +8,13 @@ defmodule LoginEjemplo.Coherence.ViewHelpers do
   @seperator {:safe, "&nbsp; | &nbsp;"}
   @helpers Module.concat(Application.get_env(:coherence, :module), Router.Helpers)
 
-  @recover_link  "Forgot your password?"
-  @unlock_link   "Send an unlock email"
-  @register_link "Need An Account?"
+  @recover_link  "Olvidastes Contraseña?"
+  @unlock_link   "Enviar desbloqueo email"
+  @register_link "Necesita una nueva cuenta?"
   @invite_link   "Invite Someone"
   @confirm_link  "Resend confirmation email"
-  @signin_link   "Sign In"
-  @signout_link  "Sign Out"
+  @signin_link   "Entrar"
+  @signout_link  "Salir"
 
   @doc """
   Create coherence template links.
