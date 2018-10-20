@@ -51,8 +51,8 @@ defmodule LoginEjemplo.Router do
   # Other scopes may use custom stacks.
   scope "/", LoginEjemplo do
     pipe_through :api
-    resources "v1/posts", V1.PostController, except: [:new, :edit]
-    options   "v1/posts", V1.PostController, :options
-    options   "v1/posts/:id", V1.PostController, :options
+    resources "/v1/posts", V1.PostController, except: [:new, :edit]
+    options "/v1/posts", V1.PostController, :options
+    options "/v1/posts/:id", V1.PostController, :options
   end
 end
