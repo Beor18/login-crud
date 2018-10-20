@@ -21,18 +21,4 @@ Visitar [`localhost:4000`](http://localhost:4000) desde el navegador.
 * Agregado boton cerrar sesión
 * Nuevo campo en formulario (colectivos, solo para aprender como agregar campo e insertar en la BD)
 * Mejoras en diseño y traducciones a español
-
-## App /gilberto
-
-  * Requisitos: tener instalador Ionic 3, Nodejs y SDK Android
-
-  * Instalar `npm install`
-  * Para correr en navegador `ionic serve`
-  * Agregar android `ionic cordova platform add android`
-  * Para correr en Android `ionic cordova run android`
-
-## ¿Que contiene la app Gilberto?
-
-  * Mostrar la informacion de la api rest
-  * Pruebas con geolocalizacion mediante GoogleMaps
  
