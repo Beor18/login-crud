@@ -11,7 +11,7 @@ Para iniciar la app:
 
 Visitar [`localhost:4000`](http://localhost:4000) desde el navegador.
 
-# Actualizaciones al 24/01/2018
+# ¿Qué trae?
 
 * Mostrar Nombre de usuario una vez logeado
 * Agregado subir y mostrar imagenes
